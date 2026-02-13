@@ -170,7 +170,7 @@ public class ServerDataPackets implements PacketListener {
                 final SessionPlayerEntity entity = player.getSession().getPlayerEntity();
 
                 UpdateAttributesPacket attributesPacket = new UpdateAttributesPacket();
-                attributesPacket.setRuntimeEntityId(entity.getGeyserId());
+                attributesPacket.setRuntimeEntityId(entity.geyserId());
                 attributesPacket.getAttributes().addAll(entity.getAttributes().values());
                 player.getSession().sendUpstreamPacket(attributesPacket);
 
